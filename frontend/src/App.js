@@ -5,6 +5,9 @@ import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Journal from "./pages/Journal/Journal";
+import CreateJournal from "./pages/CreateJournal/CreateJournal";
+import UpdateJournal from "./pages/CreateJournal/UpdateJournal";
+
 function App() {
   return (
     <div className="App">
@@ -16,6 +19,8 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/journal" element={<Journal />} />
+          <Route path="/createJournal" element={<CreateJournal />} />
+          <Route path="/updateJournal" element={<UpdateJournal />} />
         </Routes>
       </BrowserRouter>
     </div>

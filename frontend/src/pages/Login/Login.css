@@ -9,7 +9,7 @@
 }
 
 .login__container {
-  padding: 14rem;
+  padding: 14rem 14rem 0rem 14rem;
 }
 
 .box::after {

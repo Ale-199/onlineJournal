@@ -1,0 +1,67 @@
+.createJournal__container {
+  padding: 10rem 5rem 0rem 5rem;
+}
+.createJournal__container > :nth-child(1) {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.createJournal__container > :nth-child(1):hover {
+  color: var(--primary-color);
+}
+
+.create__input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.create__input > label {
+  font-weight: 700;
+}
+
+.create__form > h2 {
+  color: var(--third-color);
+  margin-bottom: 1rem;
+}
+.updateAndDelete__btn {
+  display: flex;
+  gap: 1rem;
+}
+
+.updateAndDelete__btn > :nth-child(1) {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  padding: 0.8rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.updateAndDelete__btn > :nth-child(1):hover {
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+  scale: 1.1;
+  color: var(--primary-color);
+}
+
+.updateAndDelete__btn > :nth-child(2) {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  padding: 0.8rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.updateAndDelete__btn > :nth-child(2):hover {
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+  scale: 1.1;
+  color: var(--primary-color);
+}
