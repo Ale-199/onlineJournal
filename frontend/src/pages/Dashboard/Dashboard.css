@@ -1,0 +1,78 @@
+.dashboard__container {
+  padding: 12rem 4rem;
+}
+
+.dashboard__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.dashboard__title > :nth-child(2) {
+  text-decoration: underline;
+  font-weight: 400;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.dashboard__title > :nth-child(2):hover {
+  color: var(--primary-color);
+}
+
+.dashboard__journals {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.journalTitle {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  gap:0.3rem;
+  transition: var(--transition);
+}
+
+.journalTitle:hover {
+  color: var(--primary-color);
+}
+
+.journalTitle > h3 {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.bx-link-external {
+  text-decoration: none;
+}
+
+.editAndDelete__btn {
+  display: flex;
+  gap: 1rem;
+}
+
+.editAndDelete__btn > :nth-child(1) {
+  padding: 0.1rem 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.editAndDelete__btn > :nth-child(1):hover {
+  color: var(--second-color);
+}
+
+.editAndDelete__btn > :nth-child(2) {
+  padding: 0.1rem 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.editAndDelete__btn > :nth-child(2):hover {
+  color: red;
+}
