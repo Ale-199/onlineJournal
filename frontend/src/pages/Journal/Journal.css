@@ -1,0 +1,36 @@
+.journal__container {
+  padding: 10rem 5rem 0rem 5rem;
+}
+
+.journal__container > :nth-child(1) {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.journal__container > :nth-child(1):hover {
+  color: var(--primary-color);
+}
+
+.journal__content > :nth-child(1) {
+  text-align: center;
+  margin-bottom: 0rem;
+}
+
+.journal__content > :nth-child(2) {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0rem 13rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.journal__content > :nth-child(3) {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 2rem;
+}
