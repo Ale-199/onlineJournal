@@ -15,8 +15,12 @@ export default function Navbar() {
 
         <div>
           <div className="links">
-            <button className="btn nav__link">Log in</button>
-            <button className="btn nav__link">Sign Up</button>
+            <Link to="/login" className="btn nav__link">
+              Log in
+            </Link>
+            <Link to="/signup" className="btn nav__link">
+              Sign Up
+            </Link>
           </div>
         </div>
       </nav>

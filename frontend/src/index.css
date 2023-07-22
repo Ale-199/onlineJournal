@@ -6,6 +6,7 @@
   --primary-color: #00b0f0;
   --second-color: #0070c0;
   --third-color: #002060;
+  --fourth-color: #e7e7e7;
   --text-color: #ffffff;
   --text-color2: #3b3838;
   --bg-color: #fafafa;
@@ -22,6 +23,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -32,10 +34,6 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
 }
 
 /* ======================= Resuable CSS ======================= */

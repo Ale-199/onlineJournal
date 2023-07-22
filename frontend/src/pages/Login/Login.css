@@ -1,0 +1,153 @@
+.box {
+  position: relative;
+  width: 380px;
+  height: 420px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.login__container {
+  padding: 14rem;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    var(--primary-color),
+    var(--primary-color)
+  );
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    var(--primary-color),
+    var(--primary-color)
+  );
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.login__form {
+  position: absolute;
+  inset: 2px;
+  border-radius: 8px;
+  background: var(--text-color);
+  z-index: 10;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login__form > h2 {
+  color: var(--third-color);
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.inputBox {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+
+.inputBox > input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  z-index: 10;
+}
+
+.inputBox > span {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  font-size: 1em;
+  color: #8f8f8f;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  color: var(--text-color2);
+  transform: translateX(-10px) translateY(-34px);
+  font-size: 0.75em;
+}
+
+.inputBox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--fourth-color);
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i {
+  height: 44px;
+}
+
+.login__btn {
+  margin-top: 1rem;
+  border: none;
+  outline: none;
+  background: var(--fourth-color);
+  cursor: pointer;
+  padding: 1rem 0.5rem;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.login__btn:hover {
+  background: var(--bg-color);
+  border: 1px solid var(--text-color2);
+  scale: 1.1;
+}
+
+.login__form :nth-child(4) {
+  margin-top: 1rem;
+  font-weight: 600;
+}

@@ -23,8 +23,8 @@
 }
 
 .home__right > :nth-child(3) {
-  margin-top: 1rem;
-  margin-left: 8rem;
+  margin-top: 0rem;
+  margin-left: 10rem;
   width: 60%;
 }
 
@@ -69,9 +69,10 @@
 }
 
 .home__btn {
-  color: var(--text-color2);
+  color: var(--second-color);
+  font-size: 2rem;
 }
 
 .home__btn__container {
-  margin: 3rem 0rem 0rem 5rem;
+  margin: 4rem 0rem 0rem 4rem;
 }
