@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./CreateJournal.css";
 export default function UpdateJournal() {
   return (
     <div className="bg">
@@ -8,7 +9,7 @@ export default function UpdateJournal() {
           <h2>Edit your Journal</h2>
           <div className="create__input">
             <label htmlFor="title">Title:</label>
-            <input type="text" id="title" required="required" />
+            <input type="text" id="title" required="required" name="title" />
           </div>
           <div className="create__input">
             <label htmlFor="content">Content:</label>
@@ -18,6 +19,7 @@ export default function UpdateJournal() {
               type="text"
               id="content"
               required="required"
+              name="content"
             />
           </div>
           <div className="updateAndDelete__btn">
