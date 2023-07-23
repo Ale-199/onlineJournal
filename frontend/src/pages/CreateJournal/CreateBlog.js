@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import "./CreateJournal.css";
-export default function UpdateJournal() {
+import "./CreateBlog.css";
+
+export default function CreateBlog() {
   return (
     <div className="bg">
       <div className="container createJournal__container">
@@ -23,8 +24,8 @@ export default function UpdateJournal() {
             />
           </div>
           <div className="updateAndDelete__btn">
-            <button>
-              Update <i class="bx bxs-edit-alt"></i>
+            <button className="">
+              Create <i class="bx bxs-edit-alt"></i>
             </button>
             <button>
               Delete <i className="bx bxs-trash"></i>

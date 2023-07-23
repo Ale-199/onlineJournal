@@ -1,6 +1,6 @@
-import "./Journal.css";
+import "./Blog.css";
 
-export default function Journal() {
+export default function Blog() {
   return (
     <div className="bg">
       <div className="container journal__container">

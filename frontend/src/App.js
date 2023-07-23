@@ -4,9 +4,9 @@ import Navbar from "./components/Navbar";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import Journal from "./pages/Journal/Journal";
-import CreateJournal from "./pages/CreateJournal/CreateJournal";
-import UpdateJournal from "./pages/CreateJournal/UpdateJournal";
+import Blog from "./pages/Blog/Blog";
+import CreateBlog from "./pages/CreateJournal/CreateBlog";
+import UpdateBlog from "./pages/CreateJournal/UpdateBlog";
 
 function App() {
   return (
@@ -18,9 +18,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/journal" element={<Journal />} />
-          <Route path="/createJournal" element={<CreateJournal />} />
-          <Route path="/updateJournal" element={<UpdateJournal />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/createBlog" element={<CreateBlog />} />
+          <Route path="/updateBlog" element={<UpdateBlog />} />
         </Routes>
       </BrowserRouter>
     </div>
