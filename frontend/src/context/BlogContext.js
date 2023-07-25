@@ -4,13 +4,17 @@ export const BlogsContext = createContext();
 
 export const blogsReducer = (state, action) => {
   switch (action.type) {
-    case "SET_BLOGS":
+    case "GET_ALL_BLOGS":
       return {
         blogs: action.payload,
       };
     case "CREATE_BLOG":
+      if (state.blogs)
+        return {
+          blogs: [action.payload, ...state.blogs],
+        };
       return {
-        blogs: [action.payload, ...state.blogs],
+        blogs: [action.payload],
       };
     case "DELETE_BLOG":
       return {

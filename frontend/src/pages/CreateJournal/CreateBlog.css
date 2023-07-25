@@ -64,8 +64,16 @@
 }
 
 .updateAndDelete__btn > :nth-child(2):hover {
-  border: 1px solid var(--primary-color);
+  border: 1px solid red;
   background-color: transparent;
   scale: 1.1;
-  color: var(--primary-color);
+  color: red;
+}
+
+.radio__btn {
+  font-weight: 400;
+}
+
+.radio__btn > input{
+  margin-right: 0.3rem;
 }

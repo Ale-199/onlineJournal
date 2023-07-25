@@ -1,10 +1,3 @@
-// getAllBlogs,
-//   getBlogs,
-//   getBlog,
-//   createBlog,
-//   deleteBlog,
-//   updateBlog,
-
 const Blog = require("../models/blogModel");
 const mongoose = require("mongoose");
 

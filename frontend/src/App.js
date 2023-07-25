@@ -30,9 +30,15 @@ function App() {
             path="/dashboard"
             element={user ? <Dashboard /> : <Navigate to="/login" />}
           />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/createBlog" element={<CreateBlog />} />
-          <Route path="/updateBlog" element={<UpdateBlog />} />
+          <Route path="/blog/:id" element={<Blog />} />
+          <Route
+            path="/createBlog"
+            element={user ? <CreateBlog /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/updateBlog/:id"
+            element={user ? <UpdateBlog /> : <Navigate to="/login" />}
+          />
         </Routes>
       </BrowserRouter>
     </div>

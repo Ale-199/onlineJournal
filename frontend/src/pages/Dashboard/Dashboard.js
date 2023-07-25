@@ -1,4 +1,5 @@
 import "./Dashboard.css";
+import { Link } from "react-router-dom";
 
 export default function Dashboard() {
   return (
@@ -6,7 +7,7 @@ export default function Dashboard() {
       <div className="container dashboard__container">
         <div className="dashboard__title">
           <h2>Your Journals</h2>
-          <h4>+ Add New Journal</h4>
+          <Link to="/createBlog">+ Add New Journal</Link>
         </div>
         <div className="dashboard__journals">
           <div className="journalTitle">
