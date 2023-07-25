@@ -26,6 +26,7 @@ export default function Signup() {
                 type="text"
                 required="required"
                 onChange={(e) => setUserName(e.target.value)}
+                value={userName}
               />
               <span>User Name</span>
               <i></i>
@@ -35,6 +36,7 @@ export default function Signup() {
                 type="text"
                 required="required"
                 onChange={(e) => setEmail(e.target.value)}
+                value={email}
               />
               <span>Email</span>
               <i></i>
@@ -44,6 +46,7 @@ export default function Signup() {
                 type="password"
                 required="required"
                 onChange={(e) => setPassword(e.target.value)}
+                value={password}
               />
               <span>Password</span>
               <i></i>
