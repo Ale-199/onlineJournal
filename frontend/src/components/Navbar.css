@@ -85,3 +85,14 @@
   width: 100%;
   height: 100%;
 }
+
+.logOut__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.logOut__btn > p {
+  font-weight: 700;
+}

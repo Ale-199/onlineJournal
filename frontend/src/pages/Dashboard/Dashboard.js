@@ -1,4 +1,3 @@
-
 import "./Dashboard.css";
 
 export default function Dashboard() {
@@ -12,7 +11,7 @@ export default function Dashboard() {
         <div className="dashboard__journals">
           <div className="journalTitle">
             <h3>Title Name</h3>
-            <i class="bx bx-link-external"></i>
+            <i className="bx bx-link-external"></i>
           </div>
           <div className="editAndDelete__btn">
             <button>
@@ -26,7 +25,7 @@ export default function Dashboard() {
         <div className="dashboard__journals">
           <div className="journalTitle">
             <h3>Title Name</h3>
-            <i class="bx bx-link-external"></i>
+            <i className="bx bx-link-external"></i>
           </div>
           <div className="editAndDelete__btn">
             <button>
@@ -40,7 +39,7 @@ export default function Dashboard() {
         <div className="dashboard__journals">
           <div className="journalTitle">
             <h3>Title Name</h3>
-            <i class="bx bx-link-external"></i>
+            <i className="bx bx-link-external"></i>
           </div>
           <div className="editAndDelete__btn">
             <button>
