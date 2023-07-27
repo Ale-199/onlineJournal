@@ -2,16 +2,18 @@ import { useEffect, useState } from "react";
 import "./Blog.css";
 import { Link, useParams } from "react-router-dom";
 
-export default function Blog() {
+export default function IsPublicBlogs() {
   const { id } = useParams();
-  const [data, setData] = useState();
+  const [data, setData] = useState({});
 
   useEffect(() => {
     const fetchBlog = async () => {
-      const response = await fetch("/api/blog/" + id);
+      const response = await fetch("/api/blog/publicBlog/" + id);
 
       const json = await response.json();
+      console.log(json);
       setData(json);
+      console.log(data);
     };
 
     fetchBlog();

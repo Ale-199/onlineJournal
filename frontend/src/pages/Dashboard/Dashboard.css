@@ -29,17 +29,17 @@
 .journalTitle {
   display: flex;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   cursor: pointer;
-  gap:0.3rem;
+  gap: 0.3rem;
   transition: var(--transition);
 }
 
-.journalTitle:hover {
+.dashboard__journals:hover {
   color: var(--primary-color);
 }
 
-.journalTitle > h3 {
+.journalTitle > :nth-child(1) {
   font-weight: 600;
   text-decoration: underline;
 }
@@ -75,4 +75,11 @@
 
 .editAndDelete__btn > :nth-child(2):hover {
   color: red;
+}
+
+.auth__name {
+  display: flex;
+  gap: 1rem;
+  font-weight: 600;
+  font-size: 1.3rem;
 }

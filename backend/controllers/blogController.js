@@ -5,9 +5,26 @@ const mongoose = require("mongoose");
 const getAllBlogs = async (req, res) => {
   const blogs = await Blog.find().sort({ createAt: -1 });
 
-  const publicBlogs = blogs.filter((blog) => blog.isPublic != false);
+  const publicBlogs = blogs.filter((blog) => blog.isPublic !== false);
 
   res.status(200).json(publicBlogs);
+};
+
+//get single public blog
+const getPublicBlog = async (req, res) => {
+  const { id } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(404).json({ error: "No such blog." });
+  }
+
+  const blog = await Blog.findById(id);
+
+  if (!blog) {
+    return res.status(404).json({ error: "No such blog" });
+  }
+
+  res.status(200).json(blog);
 };
 
 //get all personal blogs
@@ -38,7 +55,7 @@ const getBlog = async (req, res) => {
 
 //create a new blog
 const createBlog = async (req, res) => {
-  const { title, content, isPublic } = req.body;
+  const { title, content, isPublic, userName } = req.body;
 
   let emptyfields = [];
 
@@ -63,6 +80,7 @@ const createBlog = async (req, res) => {
       title,
       content,
       isPublic,
+      userName,
       user_id,
     });
     res.status(200).json(blog);
@@ -117,4 +135,5 @@ module.exports = {
   createBlog,
   deleteBlog,
   updateBlog,
+  getPublicBlog,
 };

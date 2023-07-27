@@ -22,8 +22,8 @@ export default function CreateBlog() {
       setError("You must be logged in");
       return;
     }
-
-    const blog = { title, content, isPublic };
+    const userName = user.userName;
+    const blog = { title, content, isPublic, userName };
 
     const response = await fetch("/api/blog", {
       method: "POST",

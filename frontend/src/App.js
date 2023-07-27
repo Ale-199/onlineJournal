@@ -8,7 +8,8 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Blog from "./pages/Blog/Blog";
 import CreateBlog from "./pages/CreateJournal/CreateBlog";
 import UpdateBlog from "./pages/CreateJournal/UpdateBlog";
-
+import IsPublicDashboard from "./pages/Dashboard/IsPublicDashboard";
+import IsPublicBlog from "./pages/Blog/IsPublicBlog";
 function App() {
   const { user } = useAuthContext();
 
@@ -31,6 +32,7 @@ function App() {
             element={user ? <Dashboard /> : <Navigate to="/login" />}
           />
           <Route path="/blog/:id" element={<Blog />} />
+          <Route path="/isPublicBlog/:id" element={<IsPublicBlog />} />
           <Route
             path="/createBlog"
             element={user ? <CreateBlog /> : <Navigate to="/login" />}
@@ -39,6 +41,7 @@ function App() {
             path="/updateBlog/:id"
             element={user ? <UpdateBlog /> : <Navigate to="/login" />}
           />
+          <Route path="/isPublicDashboard" element={<IsPublicDashboard />} />
         </Routes>
       </BrowserRouter>
     </div>

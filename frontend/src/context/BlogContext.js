@@ -4,6 +4,10 @@ export const BlogsContext = createContext();
 
 export const blogsReducer = (state, action) => {
   switch (action.type) {
+    case "GET_ALL_PUBLIC_BLOGS":
+      return {
+        publicBlogs: action.payload,
+      };
     case "GET_ALL_BLOGS":
       return {
         blogs: action.payload,
@@ -40,6 +44,7 @@ export const blogsReducer = (state, action) => {
 export const BlogsContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(blogsReducer, {
     blogs: null,
+    publicBlogs: null,
   });
 
   return (

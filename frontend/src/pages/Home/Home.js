@@ -14,7 +14,9 @@ export default function Home() {
           <h1>Enjoy Your Life!</h1>
 
           <div className="home__btn__container">
-            <Link className="home__btn btn">Explore Public Journals</Link>
+            <Link className="home__btn btn" to="/isPublicDashboard">
+              Explore Public Journals
+            </Link>
           </div>
         </div>
       </div>
