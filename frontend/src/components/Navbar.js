@@ -2,10 +2,12 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useLogout } from "../hooks/useLogout";
 import { useAuthContext } from "../hooks/useAuthContext";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const { logout } = useLogout();
   const { user } = useAuthContext();
+  const navigate = useNavigate();
 
   const handleClick = () => {
     logout();
@@ -38,6 +40,12 @@ export default function Navbar() {
         {user && (
           <div className="logOut__btn">
             <p>Hello, {user.userName.toUpperCase()}</p>
+            <button
+              onClick={() => navigate("/dashboard")}
+              className="btn nav__link"
+            >
+              Go Dashboard
+            </button>
             <button onClick={handleClick} className="btn nav__link">
               Log Out
             </button>
