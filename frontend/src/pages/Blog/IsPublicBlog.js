@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Blog.css";
 import { Link, useParams } from "react-router-dom";
+import dayjs from "dayjs";
 
 export default function IsPublicBlogs() {
   const { id } = useParams();
@@ -11,9 +12,7 @@ export default function IsPublicBlogs() {
       const response = await fetch("/api/blog/publicBlog/" + id);
 
       const json = await response.json();
-      console.log(json);
       setData(json);
-      console.log(data);
     };
 
     fetchBlog();
@@ -24,9 +23,9 @@ export default function IsPublicBlogs() {
       <div className="container journal__container">
         <Link to="/isPublicDashboard">&larr; Go Back</Link>
         <div className="journal__content">
-          <h2>{}</h2>
-          <h3>2023-06-24</h3>
-          <p>{}</p>
+          <h2>{data.title}</h2>
+          <h3>{dayjs(data.createdAt).format("MM/DD/YYYY HH:mm:ss A")}</h3>
+          <p>{data.content}</p>
         </div>
       </div>
     </div>
