@@ -12,7 +12,7 @@ export default function IsPublicDashboard() {
       const json = await response.json();
       console.table(json);
       if (response.ok) {
-        dispatch({ type: "GET_ALL_PUBLIC_BLOGS", payload: json });
+        dispatch({ type: "ALL_PUBLIC_BLOGS", payload: json });
       }
     };
 

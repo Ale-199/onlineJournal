@@ -4,11 +4,11 @@ export const BlogsContext = createContext();
 
 export const blogsReducer = (state, action) => {
   switch (action.type) {
-    case "GET_ALL_PUBLIC_BLOGS":
+    case "ALL_PUBLIC_BLOGS":
       return {
         publicBlogs: action.payload,
       };
-    case "GET_ALL_BLOGS":
+    case "ALL_BLOGS":
       return {
         blogs: action.payload,
       };

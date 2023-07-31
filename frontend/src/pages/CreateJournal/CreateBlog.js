@@ -64,6 +64,7 @@ export default function CreateBlog() {
               id="title"
               required="required"
               name="title"
+              value={title}
               onChange={(e) => setTitle(e.target.value)}
               // className={emptyFields.includes("title") ? "error" : ""}
             />
@@ -77,6 +78,7 @@ export default function CreateBlog() {
               id="content"
               required="required"
               name="content"
+              value={content}
               onChange={(e) => setContent(e.target.value)}
               // className={emptyFields.includes("content") ? "error" : ""}
             />
@@ -88,7 +90,6 @@ export default function CreateBlog() {
                 type="radio"
                 name="isPublic"
                 value="true"
-                // checked={isPublic === true}
                 onChange={(e) => setIsPublic(e.target.value)}
               />
               <label>Yes</label>
@@ -97,7 +98,6 @@ export default function CreateBlog() {
                 type="radio"
                 name="isPublic"
                 value="false"
-                // checked={isPublic === false}
                 onChange={(e) => setIsPublic(e.target.value)}
               />
               <label>No</label>
