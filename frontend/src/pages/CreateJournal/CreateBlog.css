@@ -19,6 +19,16 @@
   margin-bottom: 1rem;
 }
 
+.create__input > input {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.create__input > textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
 .create__input > label {
   font-weight: 700;
 }
@@ -74,6 +84,6 @@
   font-weight: 400;
 }
 
-.radio__btn > input{
+.radio__btn > input {
   margin-right: 0.3rem;
 }

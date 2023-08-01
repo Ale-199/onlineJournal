@@ -24,7 +24,7 @@ export default function IsPublicBlogs() {
         <Link to="/isPublicDashboard">&larr; Go Back</Link>
         <div className="journal__content">
           <h2>{data.title}</h2>
-          <h3>{dayjs(data.createdAt).format("MM/DD/YYYY HH:mm:ss A")}</h3>
+          <h3>{dayjs(data.createdAt).format("MM-DD-YYYY HH:mm:ss A")}</h3>
           <p>{data.content}</p>
         </div>
       </div>

@@ -56,7 +56,7 @@ export default function CreateBlog() {
       <div className="container createJournal__container">
         <Link to="/dashboard">&larr; Go Back</Link>
         <form className="create__form" onSubmit={handleSubmit}>
-          <h2>Edit your Journal</h2>
+          <h2>Create your Journal</h2>
           <div className="create__input">
             <label>Title:</label>
             <input
