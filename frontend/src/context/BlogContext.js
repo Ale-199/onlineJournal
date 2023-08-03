@@ -6,22 +6,27 @@ export const blogsReducer = (state, action) => {
   switch (action.type) {
     case "ALL_PUBLIC_BLOGS":
       return {
+        ...state,
         publicBlogs: action.payload,
       };
     case "ALL_BLOGS":
       return {
+        ...state,
         blogs: action.payload,
       };
     case "CREATE_BLOG":
       if (state.blogs)
         return {
+          ...state,
           blogs: [action.payload, ...state.blogs],
         };
       return {
+        ...state,
         blogs: [action.payload],
       };
     case "DELETE_BLOG":
       return {
+        ...state,
         blogs: state.blogs.filter((j) => j._id !== action.payload._id),
       };
     case "UPDATE_BLOG":

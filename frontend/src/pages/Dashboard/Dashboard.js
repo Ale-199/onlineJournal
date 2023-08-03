@@ -29,7 +29,9 @@ export default function Dashboard() {
   }, [dispatch, user]);
 
   //handle delete button
-  const handleDelete = async (blogId) => {
+  const handleDelete = async (blogId, e) => {
+    e.preventDefault();
+
     if (!user) {
       return;
     }
@@ -63,7 +65,8 @@ export default function Dashboard() {
                 <i className="bx bx-link-external"></i>
               </div>
               <div className="editAndDelete__btn">
-                <button onClick={() => navigate(`/updateBlog/${blog._id}`)}>
+                {/* <button onClick={() => navigate(`/updateBlog/blog._id}`)}> */}
+                <button onClick={() => navigate(`/updateBlog/blog._id}`)}>
                   Edit <i className="bx bxs-edit-alt"></i>
                 </button>
                 <button onClick={() => handleDelete(blog._id)}>
