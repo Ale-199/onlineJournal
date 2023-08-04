@@ -68,7 +68,7 @@ export default function UpdateBlog() {
     <div className="bg">
       <div className="container createJournal__container">
         <Link to="/dashboard">&larr; Go Back</Link>
-        <form className="create__form">
+        <form className="create__form" onSubmit={() => handleUpdate(blog._id)}>
           <h2>Edit your Journal</h2>
           <div className="create__input">
             <label htmlFor="title">Title:</label>
@@ -113,7 +113,7 @@ export default function UpdateBlog() {
             </div>
           </div>
           <div className="updateAndDelete__btn">
-            <button onClick={() => handleUpdate(blog._id)}>
+            <button>
               Update <i className="bx bxs-edit-alt"></i>
             </button>
           </div>
