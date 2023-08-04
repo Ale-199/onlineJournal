@@ -10,10 +10,11 @@ export default function UpdateBlog() {
   const { dispatch } = useBlogsContext();
 
   //useState hook
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
-  const [isPublic, setIsPublic] = useState();
-  const [data, setData] = useState({});
+  const [blog, setBlog] = useState({
+    title: "",
+    content: "",
+    isPublic: null,
+  });
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -22,9 +23,8 @@ export default function UpdateBlog() {
       });
 
       const json = await response.json();
-      console.table(json);
       if (response.ok) {
-        setData(json);
+        setBlog(json);
         console.table(json);
       }
     };
@@ -42,7 +42,7 @@ export default function UpdateBlog() {
       return;
     }
 
-    const updatedBlog = { title, content, isPublic };
+    const updatedBlog = { ...blog };
 
     const response = await fetch("/api/blog/" + blogId, {
       method: "PATCH",
@@ -59,11 +59,16 @@ export default function UpdateBlog() {
     }
   };
 
+  const onChange = (e) => {
+    e.persist();
+    setBlog({ ...blog, [e.target.name]: e.target.value });
+  };
+
   return (
     <div className="bg">
       <div className="container createJournal__container">
         <Link to="/dashboard">&larr; Go Back</Link>
-        <form className="create__form" onSubmit={() => handleUpdate(data._id)}>
+        <form className="create__form">
           <h2>Edit your Journal</h2>
           <div className="create__input">
             <label htmlFor="title">Title:</label>
@@ -71,8 +76,8 @@ export default function UpdateBlog() {
               type="text"
               id="title"
               name="title"
-              value={data.title}
-              onChange={(e) => setTitle(e.target.value)}
+              value={blog.title}
+              onChange={onChange}
             />
           </div>
           <div className="create__input">
@@ -83,8 +88,8 @@ export default function UpdateBlog() {
               type="text"
               id="content"
               name="content"
-              value={data.content}
-              onChange={(e) => setContent(e.target.value)}
+              value={blog.content}
+              onChange={onChange}
             />
           </div>
           <div className="create__input">
@@ -94,7 +99,7 @@ export default function UpdateBlog() {
                 type="radio"
                 name="isPublic"
                 value="true"
-                onChange={(e) => setIsPublic(e.target.value)}
+                onChange={onChange}
               />
               <label>Yes</label>
               <br></br>
@@ -102,13 +107,13 @@ export default function UpdateBlog() {
                 type="radio"
                 name="isPublic"
                 value="false"
-                onChange={(e) => setIsPublic(e.target.value)}
+                onChange={onChange}
               />
               <label>No</label>
             </div>
           </div>
           <div className="updateAndDelete__btn">
-            <button>
+            <button onClick={() => handleUpdate(blog._id)}>
               Update <i className="bx bxs-edit-alt"></i>
             </button>
           </div>

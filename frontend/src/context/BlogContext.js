@@ -39,7 +39,7 @@ export const blogsReducer = (state, action) => {
       });
       return {
         ...state,
-        blogs: updatedBlogg,
+        blogs: [updatedBlogg, ...state.blogs],
       };
     default:
       return state;

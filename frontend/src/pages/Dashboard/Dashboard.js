@@ -29,9 +29,7 @@ export default function Dashboard() {
   }, [dispatch, user]);
 
   //handle delete button
-  const handleDelete = async (blogId, e) => {
-    e.preventDefault();
-
+  const handleDelete = async (blogId) => {
     if (!user) {
       return;
     }
