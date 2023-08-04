@@ -37,6 +37,7 @@ export default function Dashboard() {
     const response = await fetch("/api/blog/" + blogId, {
       method: "DELETE",
       headers: {
+        "Content-Type": "application/json",
         Authorization: `Bearer ${user.token}`,
       },
     });

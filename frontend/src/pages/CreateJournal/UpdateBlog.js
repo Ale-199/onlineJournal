@@ -1,5 +1,5 @@
 import "./CreateBlog.css";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import { useBlogsContext } from "../../hooks/useBlogsContext";
@@ -8,6 +8,7 @@ export default function UpdateBlog() {
   const { id } = useParams();
   const { user } = useAuthContext();
   const { dispatch } = useBlogsContext();
+  const navigate = useNavigate();
 
   //useState hook
   const [blog, setBlog] = useState({
@@ -35,27 +36,34 @@ export default function UpdateBlog() {
   }, [id]);
 
   //handle update button
-  const handleUpdate = async (blogId, e) => {
+  const handleUpdate = async (e) => {
     e.preventDefault();
 
     if (!user) {
       return;
     }
 
-    const updatedBlog = { ...blog };
+    const updatedBlog = {
+      title: blog.title,
+      content: blog.content,
+      isPublic: blog.isPublic,
+    };
 
-    const response = await fetch("/api/blog/" + blogId, {
+    const response = await fetch("/api/blog/" + id, {
       method: "PATCH",
       body: JSON.stringify(updatedBlog),
       headers: {
+        "Content-Type": "application/json",
         Authorization: `Bearer ${user.token}`,
       },
     });
 
     const json = await response.json();
 
+    console.log(json);
     if (response.ok) {
       dispatch({ type: "UPDATE_BLOG", payload: json });
+      navigate("/dashboard");
     }
   };
 
@@ -68,7 +76,7 @@ export default function UpdateBlog() {
     <div className="bg">
       <div className="container createJournal__container">
         <Link to="/dashboard">&larr; Go Back</Link>
-        <form className="create__form" onSubmit={() => handleUpdate(blog._id)}>
+        <form className="create__form" onSubmit={handleUpdate}>
           <h2>Edit your Journal</h2>
           <div className="create__input">
             <label htmlFor="title">Title:</label>
