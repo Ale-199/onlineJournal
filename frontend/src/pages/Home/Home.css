@@ -17,14 +17,14 @@
 
 .home__right > :nth-child(2) {
   margin-top: 1rem;
-  margin-left: 5rem;
+  margin-left: 3rem;
   width: 60%;
   font-weight: 600;
 }
 
 .home__right > :nth-child(3) {
-  margin-top: 0rem;
-  margin-left: 10rem;
+  margin-top: 1rem;
+  margin-left: 0rem;
   width: 60%;
 }
 
@@ -70,9 +70,44 @@
 
 .home__btn {
   color: var(--second-color);
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .home__btn__container {
-  margin: 4rem 0rem 0rem 4rem;
+  margin: 4rem 0rem 0rem 0rem;
+}
+
+/*=============== BREAKPOINTS ===============*/
+
+@media screen and (max-width: 1280px) {
+  .home__container {
+    padding: 10rem 0rem 0rem 0rem;
+  }
+
+  .home__btn {
+    font-size: 1rem;
+  }
+
+  .home__right > :nth-child(1) {
+    font-size: 1.6rem;
+  }
+
+  .home__right > :nth-child(3) {
+    font-size: 1.5rem;
+  }
+}
+/* -----------------for large devices-------------- */
+@media screen and (max-width: 1112.5px) {
+  .home__right > :nth-child(2) {
+    width: 80%;
+  }
+}
+/*-------------------for medium devices--------------- */
+@media screen and (max-width: 896.5px) {
+}
+/* ---------------------for tablets----------------- */
+@media screen and (max-width: 642.5px) {
+}
+/* ----------------for mobile devices------------------ */
+@media screen and (max-width: 400px) {
 }

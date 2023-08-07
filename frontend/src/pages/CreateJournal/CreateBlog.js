@@ -66,7 +66,7 @@ export default function CreateBlog() {
               name="title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              // className={emptyFields.includes("title") ? "error" : ""}
+              className={emptyFields.includes("title") ? "error" : ""}
             />
           </div>
           <div className="create__input">
@@ -80,7 +80,7 @@ export default function CreateBlog() {
               name="content"
               value={content}
               onChange={(e) => setContent(e.target.value)}
-              // className={emptyFields.includes("content") ? "error" : ""}
+              className={emptyFields.includes("content") ? "error" : ""}
             />
           </div>
           <div className="create__input">

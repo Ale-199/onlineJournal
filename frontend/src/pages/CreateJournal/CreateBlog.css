@@ -1,5 +1,5 @@
 .createJournal__container {
-  padding: 10rem 5rem 0rem 5rem;
+  padding: 8rem 5rem 0rem 5rem;
 }
 .createJournal__container > :nth-child(1) {
   font-weight: 700;
@@ -86,4 +86,21 @@
 
 .radio__btn > input {
   margin-right: 0.3rem;
+}
+
+/*=============== BREAKPOINTS ===============*/
+
+@media screen and (max-width: 1280px) {
+}
+/* -----------------for large devices-------------- */
+@media screen and (max-width: 1112.5px) {
+}
+/*-------------------for medium devices--------------- */
+@media screen and (max-width: 896.5px) {
+}
+/* ---------------------for tablets----------------- */
+@media screen and (max-width: 642.5px) {
+}
+/* ----------------for mobile devices------------------ */
+@media screen and (max-width: 400px) {
 }

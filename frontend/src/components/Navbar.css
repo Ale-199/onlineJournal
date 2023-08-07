@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  position: fixed;
+
   top: 0;
   right: 0;
   z-index: 99;
@@ -95,4 +95,31 @@
 
 .logOut__btn > p {
   font-weight: 700;
+}
+
+/*=============== BREAKPOINTS ===============*/
+
+@media screen and (max-width: 1280px) {
+}
+/* -----------------for large devices-------------- */
+@media screen and (max-width: 1112.5px) {
+}
+/*-------------------for medium devices--------------- */
+@media screen and (max-width: 896.5px) {
+  .home__logo {
+    font-size: 1.2rem;
+    margin-left: 0.9rem;
+  }
+
+  .logOut__btn {
+    font-size: 1.2rem;
+  }
+
+  
+}
+/* ---------------------for tablets----------------- */
+@media screen and (max-width: 642.5px) {
+}
+/* ----------------for mobile devices------------------ */
+@media screen and (max-width: 400px) {
 }
