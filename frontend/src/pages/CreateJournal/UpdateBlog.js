@@ -33,7 +33,7 @@ export default function UpdateBlog() {
     if (user) {
       fetchBlog();
     }
-  }, [id]);
+  }, [id, user]);
 
   //handle update button
   const handleUpdate = async (e) => {
